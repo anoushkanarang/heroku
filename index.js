@@ -18,6 +18,6 @@ index.use(bodyParser.urlencoded({ extended: true }));
 const studentRouter = require("./routers/students");
 
 index.use("/students", studentRouter);
-index.listen(9000, function () {
+index.listen(process.env.PORT || 9000, function () {
   console.log("server started");
 });
